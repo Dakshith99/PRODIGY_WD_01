@@ -19,8 +19,8 @@ function showSection(sectionId) {
     section.classList.remove('active-section');
   });
 
-  // Handle the special case for the "welcome" section
-  var welcomeSection = document.getElementById('home'); // Update this ID
+ 
+  var welcomeSection = document.getElementById('home'); 
   if (sectionId === 'home') {
     welcomeSection.style.display = 'block';
     welcomeSection.classList.add('active-section');
@@ -40,14 +40,12 @@ document.querySelectorAll('.navbar-link').forEach(function(link) {
     showSection(targetSectionId);
   });
 });
-// ... (your existing JavaScript code)
 
-// Add this at the end of your JavaScript code
 document.addEventListener('DOMContentLoaded', function() {
-  // Show the home section by default when the page loads
-  showSection('default');
+ 
+  showSection('home');
 
-  // Add event listeners to each navbar link
+ 
   document.querySelectorAll('.navbar-link').forEach(function(link) {
     link.addEventListener('click', function(event) {
       event.preventDefault();
